@@ -6,6 +6,9 @@ dir_configs = configs
 dir_buildroot = buildroot
 dir_publish = /srv/tftp/stm32f746/
 
+all:
+	@echo "Targets bootstrap and build"
+
 bootstrap:
 	mkdir -p $(dir_download)
 	mkdir -p $(dir_buildroot)
@@ -17,8 +20,8 @@ bootstrap:
 
 build:
 	make -j10 -C $(dir_buildroot)
-	cp $(dir_buildroot)/output/images/stm32f746-disco.dtb ${dir_publish}/
-	cp $(dir_buildroot)/output/images/zImage ${dir_publish}/
+	cp $(dir_buildroot)/output/images/my-stm32f746-disco.dtb ${dir_publish}stm32f746-disco.dtb
+	cp $(dir_buildroot)/output/images/zImage ${dir_publish}
 
 flash_bootloader:
 	cd $(dir_buildroot)/output/build/host-openocd-0.10.0/tcl && ../../../host/usr/bin/openocd \
