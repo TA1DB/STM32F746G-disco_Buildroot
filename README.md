@@ -6,7 +6,7 @@ The project is a set of patches and configuration files to build a bootloader an
 Build System Setup
 ------------------
 
-Install tftpd, tftpd-hpa is suggested.
+Install tftpd, tftpd-hpa is suggested. For Ubuntu for example.
 
 `$ sudo apt install tftpd-hpa`
 
