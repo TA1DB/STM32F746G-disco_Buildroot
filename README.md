@@ -10,7 +10,7 @@ Install tftpd, tftpd-hpa is suggested. For Ubuntu for example.
 
 `$ sudo apt install tftpd-hpa`
 
-Edit /etc/default/tftpd-hpa and change TFTP_DIRECTORY to `/srv/tftp`.
+Edit `/etc/default/tftpd-hpa` and change TFTP_DIRECTORY to `/srv/tftp`.
 
 Create the directory `/srv/tftpd/stm32f746`.
 
