@@ -3,6 +3,17 @@ Linux on the STM32F746G Discovery board with Buildroot
 
 The project is a set of patches and configuration files to build a bootloader and a Linux based system image with a minimal root file system for the great [STM32F746G Discovery board](http://www.st.com/en/evaluation-tools/32f746gdiscovery.html).
 
+Build System Setup
+------------------
+
+Install tftpd, tftpd-hpa is suggested. For Ubuntu for example.
+
+`$ sudo apt install tftpd-hpa`
+
+Edit `/etc/default/tftpd-hpa` and change TFTP_DIRECTORY to `/srv/tftp`.
+
+Create the directory `/srv/tftpd/stm32f746`.
+
 Board peripherals support
 -------------------------
 
